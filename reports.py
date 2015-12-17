@@ -10,6 +10,7 @@ purpose : to store reports, requests or completed reports for rollback.
         b. file names found
         c. suggested new names
     2. provide user report for manually approval of renames
+    3. report types of file formats are used
 """
 
 import os
@@ -30,5 +31,5 @@ def save_filesearch_report(myfiles_search_list)"
     fp.close()
 
 def read_file_rename_report():
-    "read user report and rename-files accorldy"
+    "read user report and rename-files accordingly"
     pass

@@ -4,35 +4,29 @@ Created on Thu Dec 17 23:35:25 2015
 
 @author: sampathkumarm
 
-purpose:
+purpose: suggest new names for files
 
+        * file names starting with year is not good
+        * filename should be only lower-caps 
+        * un-necesary symbols and charecter are to be cleaned up
+        * file starting with number is not good like 01, 02, 03,..
+        
+        ########## pending
+        #####
+        * folder-names should not be part of filename
+        * with-in same-folder - if all are having a common name
+        * Cleanup_keywords like - episode, season,.. can be kept as optional
+        * Allowed_keywords like dvdrip, website, torrent,.. can be removed
+        * File-properties # extension-type, size, bit-rate, resolution
+        * NLTP # - applying ngrams; find best suggestion, segregate for folders
 """
-########################################################################
-########## GOAL :: Focus on a single file functionality ###############
-#### Filename clean - up task
-# file names starting with year is not good
-# filename should be only lower-caps 
-# un-necesary symbols and charecter are to be cleaned up
-# -------------------------- pending
-# -------------------------- pending
-# file starting with number is not good like 01, 02, 03,..
-# folder-names should not be part of filename
-# with-in same-folder - if all are having a common name
-#
-# Cleanup_keywords like - episode, season,.. can be kept as optional
-# Allowed_keywords like dvdrip, website, torrent,.. can be removed
-# 
-# file-properties are to be added 
-#       extension-type, size, bit-rate, resolution
-#
-#
-# dependency file :: config.py
-########################################################################
 
 from __future__ import division
 
 import os
 import re
+
+from config import cleanup_keywords, allowed_keywords
 
 year_regex = '(?:(?:19|20)[0-9]{2})'
 

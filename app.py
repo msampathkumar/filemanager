@@ -5,6 +5,12 @@ Created on Thu Dec 17 23:35:25 2015
 @author: sampathkumarm
 
 purpose:
+    * provide recommendation for renaming-files
+    ##### pending
+    * provide file search options
+    * provide recommendation - for storing files
+    * re-names files as per suggested
+    * provide language based segregation of files
 
 """
 

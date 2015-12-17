@@ -1,12 +1,12 @@
-########################################################################
-########## GOAL :: store all configuration details here ################
-#
-#
-# -------------------------- pending
-# -------------------------- pending
-# check if 'cleanup_keywords' & 'allowed_keywords' are exclusive
-# check if provided parent folders exist
-########################################################################
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Dec 17 23:35:25 2015
+
+@author: sampathkumarm
+
+purpose: save core configuration details for app
+
+"""
 
 import os
 
