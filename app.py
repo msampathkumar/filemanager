@@ -1,3 +1,13 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Dec 17 23:35:25 2015
+
+@author: sampathkumarm
+
+purpose:
+
+"""
+
 ########################################################################
 ###### GOAL :: Get Extracted, Transformed Data and Present views ######
 #
@@ -8,9 +18,7 @@
 #
 # save a csv-file of what has happened !!
 ########################################################################
-'''
 
-'''
 
 
 import os
@@ -30,10 +38,10 @@ def get_all_files(sources):
     return all_files
 
 def get_source_files(source):
-    source_files = []
-    for root, subFolders, files in os.walk(source):
-        for file_name in files:
-            source_files.append( (root, file_name) )
+    source_files = [(root, file_name)
+                    for root, subFolders, files in os.walk(source)
+                    for file_name in files
+                   ]
     return source_files
 
 def test():
@@ -50,7 +58,6 @@ all_files = get_all_files(parent_folders)
 all_files.sort(key= lambda x:x[-1])
 all_only_filenames = [ ( _[1], get_normalised_filename(_[1])) \
      for _ in all_files]
-
 
 
 
